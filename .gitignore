@@ -1,7 +1,23 @@
+# Maven
 target/
+
+# IntelliJ IDEA
 .idea/
-.vscode/
 *.iml
-screenshots/*.png
-reports/Testlauf_Zusammenfassung.md
+
+# VS Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# macOS
 .DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
