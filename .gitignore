@@ -1,0 +1,7 @@
+target/
+.idea/
+.vscode/
+*.iml
+screenshots/*.png
+reports/Testlauf_Zusammenfassung.md
+.DS_Store

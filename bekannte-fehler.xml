@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ShopSphere – bekannte Fehler" parallel="none">
+    <listeners>
+        <listener class-name="de.ahmedali.shopsphere.listener.TestListener"/>
+    </listeners>
+    <test name="Reproduzierbare Fehler">
+        <classes>
+            <class name="de.ahmedali.shopsphere.tests.ui.ProduktTests">
+                <methods>
+                    <include name="kategoriefilterElektronik"/>
+                    <include name="kategoriefilterSport"/>
+                    <include name="preissortierungAufsteigend"/>
+                    <include name="preissortierungAbsteigend"/>
+                    <include name="bewertungssortierungAbsteigend"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

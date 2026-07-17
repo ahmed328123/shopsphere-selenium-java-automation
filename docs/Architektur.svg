@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6d5dfc"/><stop offset="1" stop-color="#27c7d9"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".14"/></filter></defs>
+<rect width="1000" height="430" rx="28" fill="#f5f7fc"/>
+<text x="50" y="55" font-family="Arial" font-size="28" font-weight="700" fill="#18213d">ShopSphere Testarchitektur</text>
+<g filter="url(#s)"><rect x="55" y="105" width="220" height="125" rx="22" fill="url(#g)"/><text x="165" y="155" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="white">Deutsche Web-App</text><text x="165" y="187" text-anchor="middle" font-family="Arial" font-size="15" fill="#ecfaff">HTML · CSS · JavaScript</text></g>
+<g filter="url(#s)"><rect x="390" y="105" width="220" height="125" rx="22" fill="#ffffff"/><text x="500" y="155" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#18213d">Testschichten</text><text x="500" y="187" text-anchor="middle" font-family="Arial" font-size="15" fill="#6f7892">UI · API · Datenbank</text></g>
+<g filter="url(#s)"><rect x="725" y="105" width="220" height="125" rx="22" fill="#10162f"/><text x="835" y="155" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="white">CI/CD</text><text x="835" y="187" text-anchor="middle" font-family="Arial" font-size="15" fill="#cfd6f4">GitHub Actions · Jenkins</text></g>
+<path d="M275 168 H390" stroke="#6d5dfc" stroke-width="5" stroke-linecap="round"/><path d="M610 168 H725" stroke="#27c7d9" stroke-width="5" stroke-linecap="round"/>
+<g filter="url(#s)"><rect x="260" y="290" width="480" height="85" rx="20" fill="#ffffff"/><text x="500" y="325" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#18213d">Ergebnisse und Nachweise</text><text x="500" y="353" text-anchor="middle" font-family="Arial" font-size="14" fill="#6f7892">TestNG-Bericht · deutsche Zusammenfassung · Screenshots · Bug Reports</text></g>
+</svg>

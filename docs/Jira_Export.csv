@@ -1,0 +1,6 @@
+Vorgangstyp;Schlüssel;Zusammenfassung;Priorität;Schweregrad;Status;Test
+Fehler;BUG-001;Kategoriefilter Elektronik wird nicht angewendet;Hoch;Hoch;Offen;kategoriefilterElektronik
+Fehler;BUG-002;Kategoriefilter Sport wird nicht angewendet;Hoch;Mittel;Offen;kategoriefilterSport
+Fehler;BUG-003;Preissortierung aufsteigend funktioniert nicht;Hoch;Mittel;Offen;preissortierungAufsteigend
+Fehler;BUG-004;Preissortierung absteigend funktioniert nicht;Hoch;Mittel;Offen;preissortierungAbsteigend
+Fehler;BUG-005;Bewertungssortierung funktioniert nicht;Mittel;Mittel;Offen;bewertungssortierungAbsteigend

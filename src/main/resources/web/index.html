@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="hintergrund-orb orb-eins"></div>
+<div class="hintergrund-orb orb-zwei"></div>
+
+<header class="kopfzeile">
+    <div class="marke">
+        <div class="logo">S</div>
+        <div><strong>ShopSphere</strong><span>Qualität trifft Einkauf</span></div>
+    </div>
+    <nav id="navigation" class="navigation versteckt">
+        <button data-testid="nav-produkte">Produkte</button>
+        <button data-testid="nav-warenkorb">Warenkorb <span class="zaehler" data-testid="warenkorb-anzahl">0</span></button>
+        <button data-testid="nav-bestellungen">Bestellungen</button>
+        <button data-testid="nav-profil">Profil</button>
+        <button class="abmelden" data-testid="abmelden">Abmelden</button>
+    </nav>
+</header>
+
+<main class="inhalt">
+    <section id="anmeldung" class="anmelde-bereich">
+        <div class="anmelde-visual">
+            <span class="etikett">AUTOMATISIERT GETESTET</span>
+            <h1>Modern einkaufen.<br><em>Sicher getestet.</em></h1>
+            <p>Eine farbenfrohe E-Commerce-Demo für professionelle UI-, API- und Datenbanktests.</p>
+            <div class="vorteile">
+                <div><span>✓</span> Schneller Produktkatalog</div>
+                <div><span>✓</span> Transparenter Checkout</div>
+                <div><span>✓</span> Nachvollziehbare Qualität</div>
+            </div>
+        </div>
+        <div class="anmelde-karte">
+            <div class="symbol-kreis">🔐</div>
+            <h2>Willkommen zurück</h2>
+            <p>Melden Sie sich mit dem Testkonto an.</p>
+            <label>E-Mail-Adresse</label>
+            <input data-testid="email" type="email" placeholder="qa@shopsphere.local">
+            <label>Passwort</label>
+            <input data-testid="passwort" type="password" placeholder="Passwort eingeben">
+            <button class="primaer" data-testid="anmelden">Jetzt anmelden</button>
+            <p class="fehler versteckt" data-testid="anmelde-fehler"></p>
+            <small>Demo-System · Keine echten Zahlungsdaten</small>
+        </div>
+    </section>
+
+    <section id="anwendung" class="versteckt">
+        <section id="produkte-ansicht" class="ansicht">
+            <div class="hero">
+                <div>
+                    <span class="etikett dunkel">NEUE KOLLEKTION</span>
+                    <h1>Produkte, die Ihren Alltag <em>leichter</em> machen.</h1>
+                    <p>Entdecken Sie ausgewählte Technik-, Sport- und Haushaltsprodukte.</p>
+                </div>
+                <div class="hero-statistiken">
+                    <div><strong>6</strong><span>Produkte</span></div>
+                    <div><strong>4,6</strong><span>Ø Bewertung</span></div>
+                    <div><strong>24 h</strong><span>Versand</span></div>
+                </div>
+            </div>
+
+            <div class="filterleiste">
+                <div class="suchfeld">⌕<input data-testid="suche" placeholder="Produkte durchsuchen"></div>
+                <select data-testid="kategorie">
+                    <option value="">Alle Kategorien</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Haushalt">Haushalt</option>
+                    <option value="Bücher">Bücher</option>
+                </select>
+                <select data-testid="sortierung">
+                    <option value="">Standardsortierung</option>
+                    <option value="preis-auf">Preis: aufsteigend</option>
+                    <option value="preis-ab">Preis: absteigend</option>
+                    <option value="bewertung-ab">Bewertung: absteigend</option>
+                </select>
+            </div>
+            <div id="produktliste" class="produktgitter" data-testid="produktliste"></div>
+        </section>
+
+        <section id="warenkorb-ansicht" class="ansicht versteckt">
+            <div class="seitenkopf"><div><span class="etikett dunkel">IHRE AUSWAHL</span><h1>Warenkorb</h1></div><div class="seiten-icon">🛒</div></div>
+            <div id="warenkorb-positionen" data-testid="warenkorb-positionen"></div>
+            <div class="summe-karte">
+                <div><span>Gesamtsumme</span><strong>€<span data-testid="warenkorb-summe">0.00</span></strong></div>
+                <button class="primaer" data-testid="zur-kasse">Zur Kasse</button>
+            </div>
+            <p class="hinweis versteckt" data-testid="warenkorb-meldung"></p>
+        </section>
+
+        <section id="kasse-ansicht" class="ansicht versteckt">
+            <div class="seitenkopf"><div><span class="etikett dunkel">SICHERER CHECKOUT</span><h1>Bestellung abschließen</h1></div><div class="seiten-icon">💳</div></div>
+            <div class="checkout-layout">
+                <div class="formular-karte">
+                    <label>Vollständiger Name</label><input data-testid="kasse-name" placeholder="Vor- und Nachname">
+                    <label>Adresse</label><input data-testid="kasse-adresse" placeholder="Straße und Hausnummer">
+                    <label>Stadt</label><input data-testid="kasse-stadt" placeholder="Wohnort">
+                    <label>Zahlungsart</label>
+                    <select data-testid="zahlungsart"><option value="">Bitte auswählen</option><option value="karte">Kreditkarte</option><option value="paypal">PayPal</option></select>
+                    <button class="primaer" data-testid="bestellung-aufgeben">Bestellung aufgeben</button>
+                    <p class="fehler versteckt" data-testid="kasse-fehler"></p>
+                </div>
+                <aside class="sicherheits-karte"><div>🛡️</div><h3>Sicherer Einkauf</h3><p>Ihre Demo-Daten werden ausschließlich lokal verarbeitet.</p><ul><li>Verschlüsselte Sitzung</li><li>Keine echten Zahlungsdaten</li><li>Automatisierte Qualitätsprüfung</li></ul></aside>
+            </div>
+        </section>
+
+        <section id="bestellungen-ansicht" class="ansicht versteckt">
+            <div class="seitenkopf"><div><span class="etikett dunkel">ÜBERSICHT</span><h1>Bestellungen</h1></div><div class="seiten-icon">📦</div></div>
+            <div id="bestellungsliste" data-testid="bestellungsliste"></div>
+        </section>
+
+        <section id="profil-ansicht" class="ansicht versteckt">
+            <div class="seitenkopf"><div><span class="etikett dunkel">KONTO</span><h1>Profil</h1></div><div class="seiten-icon">👤</div></div>
+            <div class="profil-karte">
+                <div class="avatar">AA</div>
+                <label>Name</label><input data-testid="profil-name" value="Ahmed Ali">
+                <label>Telefon</label><input data-testid="profil-telefon" placeholder="Telefonnummer">
+                <button class="primaer" data-testid="profil-speichern">Profil speichern</button>
+                <p class="erfolg versteckt" data-testid="profil-meldung"></p>
+            </div>
+        </section>
+    </section>
+</main>
+
+<div class="toast versteckt" data-testid="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>

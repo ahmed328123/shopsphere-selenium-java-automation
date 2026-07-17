@@ -1,0 +1,24 @@
+name: ShopSphere Testausführung
+on:
+  push: { branches: [ main, master ] }
+  pull_request: { branches: [ main, master ] }
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21', cache: maven }
+      - name: Vollständige Tests ausführen
+        run: mvn -B clean test -Pfull -Dheadless=true -Dbrowser=chrome -Dmaven.test.failure.ignore=true
+      - name: Testnachweise hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shopsphere-testergebnisse
+          path: |
+            target/surefire-reports/
+            screenshots/
+            reports/

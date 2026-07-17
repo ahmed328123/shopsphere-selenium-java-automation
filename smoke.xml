@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ShopSphere – Smoke-Test" parallel="none">
+    <listeners>
+        <listener class-name="de.ahmedali.shopsphere.listener.TestListener"/>
+    </listeners>
+    <test name="Kritische Smoke-Tests">
+        <groups><run><include name="smoke"/></run></groups>
+        <packages><package name="de.ahmedali.shopsphere.tests.ui"/></packages>
+    </test>
+</suite>
