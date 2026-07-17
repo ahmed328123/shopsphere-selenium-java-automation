@@ -109,6 +109,8 @@ docs/Fehlerberichte           Detaillierte Bug Reports
 reports                       Deutsche Testlauf-Zusammenfassung
 screenshots                   Screenshots bei UI-Fehlern
 ```
+CI-Test: Automatischer Jenkins-Build aktiviert.
+
 
 ## Autor
 
