@@ -4,6 +4,8 @@ pipeline {
     options {
         skipDefaultCheckout(true)
         timestamps()
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '10'))
     }
 
     tools {
@@ -20,12 +22,7 @@ pipeline {
 
         stage('Tests ausführen') {
             steps {
-                bat '''
-                    mvn -B clean test -Pfull ^
-                    -Dheadless=true ^
-                    -Dbrowser=chrome ^
-                    -Dmaven.test.failure.ignore=true
-                '''
+                bat 'mvn -B clean test -Pfull -Dheadless=true -Dbrowser=chrome -DslowMo=0 -DkeepOpen=0 -Dmaven.test.failure.ignore=true'
             }
         }
     }
